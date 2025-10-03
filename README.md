@@ -10,13 +10,14 @@
 ## 🛠️ Installation
 
 ## 1. Clone Repository
-```bash
+```
 git clone https://github.com/delkodeeel/selenium-python-pytest.git
 cd selenium-python-pytest
+```
 ## 2. Install Dependencies
 ```pip install selenium pytest pytest-bdd allure-pytest
 ```
-## 3. ▶️ Running Tests**
+## 3. ▶️ Running Tests
 Run all tests
 ```
 pytest -v
@@ -29,7 +30,7 @@ Run tests with Allure results
 ```
 pytest steps/login.py --alluredir=reports/allure-results
 ```
-## 5. 📊 Generate Allure Report**
+## 4. 📊 Generate Allure Report
 ```
 allure serve reports/allure-results
 ```
