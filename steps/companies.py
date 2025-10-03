@@ -60,6 +60,8 @@ def step_complete_form_companies(browser):
     address = waitHelper(browser, locs.locators["textbox_address_company"])
     address.send_keys(fake.address())
     select_dropdown(browser, locs.locators["dropdown_country"], "Indonesia")
+
+    # Still error when select province
     select_dropdown(browser, locs.locators["dropdown_province"], "MALUKU")
     search_input = waitHelper(browser, By.XPATH, "//input[@placeholder='Search']")
     search_input.clear()

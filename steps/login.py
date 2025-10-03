@@ -6,6 +6,7 @@ from faker import Faker
 import xpaths.xpath_web as locs
 import pytest
 import time
+import allure
 
 fake = Faker()
 
@@ -27,30 +28,25 @@ def browser():
 def step_impl(browser):
     browser.get('https://esuite.edot.id/')
     time.sleep(5)
-    locator_email = locs.locators["button_email"]
-    browser.find_element(*locator_email).click()
-    time.sleep(5)
+    with allure.step("Sucessfully access to login page"):
+        locator_email = locs.locators["button_email"]
+        browser.find_element(*locator_email).click()
+        time.sleep(5)
 
 @when(parsers.parse("user input {username} and {password}"))
 def step_input_credentials(browser, username, password):
-    # username
-    locator_username = locs.locators["textbox_username"]
-    browser.find_element(*locator_username).send_keys(username)
-    time.sleep(2)
-
-    # click login
-    locator_login = locs.locators["button_login"]
-    browser.find_element(*locator_login).click()
-    time.sleep(2)
-
-    # password
-    locator_password = locs.locators["textbox_password"]
-    browser.find_element(*locator_password).send_keys(password)
-    time.sleep(2)
-
-    # click login again
-    browser.find_element(*locator_login).click()
-    time.sleep(2)
+    with allure.step("Input username and password"):
+        locator_username = locs.locators["textbox_username"]
+        browser.find_element(*locator_username).send_keys(username)
+        time.sleep(2)
+        locator_login = locs.locators["button_login"]
+        browser.find_element(*locator_login).click()
+        time.sleep(2)
+        locator_password = locs.locators["textbox_password"]
+        browser.find_element(*locator_password).send_keys(password)
+        time.sleep(2)
+        browser.find_element(*locator_login).click()
+        time.sleep(2)
 
 
 @then(parsers.parse("user {status} logged in"))
