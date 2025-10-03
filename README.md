@@ -6,29 +6,8 @@ Automation testing project menggunakan **Selenium**, **Pytest-BDD**, dan integra
 
 ## 📂 Project Structure
 
-├── features/ # File feature BDD (Gherkin)
-│ ├── companies.feature
-│ └── login.feature
-│
-├── steps/ # Step definitions
-│ ├── companies.py
-│ └── login.py
-│
-├── helpers/ # Helper functions (click, wait, dropdown, etc.)
-│ ├── clickElement.py
-│ ├── select_dropdown.py
-│ └── waitForElement.py
-│
-├── xpaths/ # Locator definitions
-│ ├── init.py
-│ └── xpath_web.py
-│
-├── conftest.py # Global fixtures (browser setup, hooks, etc.)
-├── test_runner.py # Optional test runner script
-└── README.md # Project documentation
+<img width="500" height="561" alt="Screenshot 2025-10-03 at 10 29 28" src="https://github.com/user-attachments/assets/7e703951-e95d-4fa8-8150-28f1b64645bd" />
 
-yaml
-Copy code
 
 ---
 
@@ -38,6 +17,7 @@ Copy code
 ```bash
 git clone https://github.com/delkodeeel/selenium-python-pytest.git
 cd selenium-python-pytest
+### 1. Clone Repository
 **### 2. Install Dependencies**
 bash
 Copy code
