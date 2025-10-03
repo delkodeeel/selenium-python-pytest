@@ -38,17 +38,11 @@ Copy code
 ```bash
 git clone https://github.com/delkodeeel/selenium-python-pytest.git
 cd selenium-python-pytest
-### 2. Setup Virtual Environment (Opsional tapi disarankan)
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate   # Mac/Linux
-venv\Scripts\activate      # Windows
-### 3. Install Dependencies
+**### 2. Install Dependencies**
 bash
 Copy code
 pip install selenium pytest pytest-bdd allure-pytest
-### 4. ▶️ Running Tests
+**### 3. ▶️ Running Tests**
 Run all tests
 bash
 Copy code
@@ -61,7 +55,7 @@ Run tests with Allure results
 bash
 Copy code
 pytest steps/login.py --alluredir=reports/allure-results
-### 5. 📊 Generate Allure Report
+**### 5. 📊 Generate Allure Report**
 bash
 Copy code
 allure serve reports/allure-results
