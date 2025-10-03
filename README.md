@@ -15,7 +15,8 @@ git clone https://github.com/delkodeeel/selenium-python-pytest.git
 cd selenium-python-pytest
 ```
 ## 2. Install Dependencies
-```pip install selenium pytest pytest-bdd allure-pytest
+```
+pip install selenium pytest pytest-bdd allure-pytest
 ```
 ## 3. ▶️ Running Tests
 Run all tests
